@@ -1,7 +1,26 @@
-import React from 'react';
+// import React from 'react';
+import React,{useEffect, useState} from 'react'
 // import './Home.css';
+import { auth } from '../firebase-config';
+import {onAuthStateChanged} from 'firebase/auth'
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const [user,setUser]=useState('');
+  onAuthStateChanged(auth,(user1)=>{
+    if(user1){
+      setUser(user1.uid);
+    }
+  })
+  const nav=useNavigate();
+
+  useEffect(()=>{
+    if(!user){
+      nav('/register')
+    }
+
+  },[]);
+
   return (
     <div className="home">
       <header>

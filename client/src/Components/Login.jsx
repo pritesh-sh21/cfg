@@ -1,8 +1,10 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { auth } from '../firebase-config';
+import {onAuthStateChanged} from 'firebase/auth'
 // import React from 'react'
 import './style.css'
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
@@ -15,7 +17,6 @@ const Login = () => {
       console.log(e);
     } 
   }
-
     return (
         <div className="login template d-flex justify-content-center align-items-center 100-w 100-vh bg-primary">
             <div className='40-w p-5 rounded bg-white'>
