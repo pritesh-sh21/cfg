@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../Images/logo.jpeg';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -26,13 +27,13 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Home</a>
+                            <Link className="nav-link" to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">About Us</a>
+                            <Link className="nav-link" to="#">About Us</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Contact Us</a>
+                            <Link className="nav-link" to="#">Contact Us</Link>
                         </li>
                     </ul>
                 </div>
