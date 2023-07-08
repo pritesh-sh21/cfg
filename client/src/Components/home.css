@@ -1,0 +1,22 @@
+.home {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  section p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  footer p {
+    font-size: 14px;
+    color: #999;
+  }
