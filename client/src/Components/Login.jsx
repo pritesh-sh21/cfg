@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './style.css'
 const Login = () => {
     return (
         <div className="login template d-flex justify-content-center align-items-center 100-w 100-vh bg-primary">
