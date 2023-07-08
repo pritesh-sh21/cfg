@@ -1,6 +1,8 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import React,{useState} from 'react'
 import { auth } from '../firebase-config';
+// import React from 'react'
+import './style.css'
 const Login = () => {
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
@@ -48,3 +50,5 @@ const Login = () => {
 }
 
 export default Login
+
+// export default Login

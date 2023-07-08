@@ -4,6 +4,9 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase-config';
 
 
+// import React from 'react'
+import './style.css'
+// import { Link } from 'react-router-dom'
 const Register = () => {
     const [firstName,setFirstName]=useState('');
     const [secName,setSecName]=useState('');
