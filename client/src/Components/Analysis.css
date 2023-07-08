@@ -1,0 +1,8 @@
+.card{
+    float: right;
+    margin: 10px;
+    border-radius: 15px;
+    background: #e0e0e0;
+box-shadow:  26px 26px 78px #9d9d9d,
+             -26px -26px 78px #ffffff;
+}
