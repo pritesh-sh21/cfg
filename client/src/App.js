@@ -22,7 +22,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        {user && <Route path='/' element={<Home />}></Route>}
+        {/* {user && <Route path='/' element={<Home />}></Route>} */}
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
 

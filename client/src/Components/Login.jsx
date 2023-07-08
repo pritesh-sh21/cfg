@@ -1,18 +1,31 @@
-import React from 'react'
-
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import React,{useState} from 'react'
+import { auth } from '../firebase-config';
 const Login = () => {
+  const [email,setEmail]=useState('');
+  const [password,setPassword]=useState('');
+
+  const login=async()=>{
+    try{
+      await signInWithEmailAndPassword(auth,email,password);
+    }
+    catch(e){
+      console.log(e);
+    } 
+  }
+
     return (
         <div className="login template d-flex justify-content-center align-items-center 100-w 100-vh bg-primary">
             <div className='40-w p-5 rounded bg-white'>
-                <form>
+                <form onSubmit={login}>
                     <h3>Sign In</h3>
                     <div className='mb-2'>
                         <label htmlFor="email">Email</label>
-                        <input type="email" placeholder='Enter Email' className='form-control' />
+                        <input type="email" placeholder='Enter Email' className='form-control' onChange={(e)=>{setEmail(e.target.value)}} />
                     </div>
                     <div classame="mb-2">
                         <label htmlFor="password">Password</label>
-                        <input type="password" placeholder='Enter Password' className='form-control' />
+                        <input type="password" placeholder='Enter Password' className='form-control' onChange={(e)=>{setPassword(e.target.value)}}/>
                     </div>
                     <div className='mb-2'>
                         <input type="checkbox" className="custom-control custom-checkbox" id="check" />
